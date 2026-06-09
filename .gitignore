@@ -1,0 +1,103 @@
+# ================================
+# CREDENCIALES — NUNCA SUBIR
+# ================================
+.env
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ================================
+# PYTHON
+# ================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+
+# ================================
+# JUPYTER
+# ================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ================================
+# HERRAMIENTAS DE IA
+# ================================
+# Claude Code
+.claude/
+CLAUDE.md
+.claude_files
+
+# GitHub Copilot
+.copilot/
+
+# Cursor
+.cursor/
+.cursorignore
+.cursorindexingignore
+
+# Codeium
+.codeium/
+
+# Tabnine
+.tabnine/
+
+# JetBrains AI
+.idea/
+
+# ================================
+# SISTEMAS OPERATIVOS
+# ================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ================================
+# EDITORES
+# ================================
+.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# ================================
+# DATOS SENSIBLES / GRANDES
+# ================================
+*.csv
+!*-example.csv
+*.parquet
+*.avro
+data/raw/
+data/processed/
+
+# ================================
+# DOCKER
+# ================================
+docker-compose.override.yml
+
+# ================================
+# AWS
+# ================================
+.aws/credentials
+aws-exports.js
+
+# ================================
+# LOGS
+# ================================
+*.log
+logs/
