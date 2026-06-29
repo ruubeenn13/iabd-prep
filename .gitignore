@@ -1,15 +1,11 @@
-# ================================
-# CREDENCIALES — NUNCA SUBIR
-# ================================
+# Credenciales - nunca subir
 .env
 *.pem
 *.key
 *.p12
 *.pfx
 
-# ================================
-# PYTHON
-# ================================
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -25,40 +21,29 @@ venv/
 env/
 ENV/
 
-# ================================
-# JUPYTER
-# ================================
+# Jupyter
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# ================================
-# HERRAMIENTAS DE IA
-# ================================
+# Herramientas de IA
 # Claude Code
 .claude/
 CLAUDE.md
 .claude_files
-
 # GitHub Copilot
 .copilot/
-
 # Cursor
 .cursor/
 .cursorignore
 .cursorindexingignore
-
 # Codeium
 .codeium/
-
 # Tabnine
 .tabnine/
-
 # JetBrains AI
 .idea/
 
-# ================================
-# SISTEMAS OPERATIVOS
-# ================================
+# Sistemas operativos
 .DS_Store
 .DS_Store?
 ._*
@@ -67,17 +52,13 @@ CLAUDE.md
 Thumbs.db
 desktop.ini
 
-# ================================
-# EDITORES
-# ================================
+# Editores
 .vscode/settings.json
 *.swp
 *.swo
 *~
 
-# ================================
-# DATOS SENSIBLES / GRANDES
-# ================================
+# Datos sensibles o grandes
 *.csv
 !*-example.csv
 *.parquet
@@ -85,19 +66,13 @@ desktop.ini
 data/raw/
 data/processed/
 
-# ================================
-# DOCKER
-# ================================
+# Docker
 docker-compose.override.yml
 
-# ================================
 # AWS
-# ================================
 .aws/credentials
 aws-exports.js
 
-# ================================
-# LOGS
-# ================================
+# Logs
 *.log
 logs/
