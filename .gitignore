@@ -26,21 +26,15 @@ ENV/
 *.ipynb_checkpoints
 
 # Herramientas de IA
-# Claude Code
 .claude/
 CLAUDE.md
 .claude_files
-# GitHub Copilot
 .copilot/
-# Cursor
 .cursor/
 .cursorignore
 .cursorindexingignore
-# Codeium
 .codeium/
-# Tabnine
 .tabnine/
-# JetBrains AI
 .idea/
 
 # Sistemas operativos

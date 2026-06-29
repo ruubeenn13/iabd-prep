@@ -1,36 +1,37 @@
 # IABD Prep 2026
 
-Repositorio de prácticas y apuntes personales del plan de preparación para el **Curso de Especialización en Inteligencia Artificial y Big Data** - IES Severo Ochoa, Elche (octubre 2026, 600h).
+Repositorio de prácticas y apuntes del plan de preparación para el Curso de Especialización en Inteligencia Artificial y Big Data, IES Severo Ochoa, Elche (inicio octubre 2026, 600h).
 
-El plan cubre 16 semanas de estudio previo al curso, organizado por bloques tecnológicos.
+## Resumen del plan
+
+Plan comprimido de 7 semanas, del 10 de agosto al 27 de septiembre, centrado en los tres bloques con más peso del curso: Python, MongoDB y AWS. El resto de tecnologías (Hadoop, Spark, Kafka, NiFi, Airflow, Hugging Face e IoT) se cubren en clase desde cero y no entran en esta preparación.
+
+| Dato | Valor |
+|---|---|
+| Duración | 7 semanas (10 ago a 27 sep) |
+| Ritmo | 6 a 8 horas por semana |
+| Total estimado | ~50 horas |
+| Bloques | Python, MongoDB, AWS |
+| Buffer | 28 sep al 4 oct (repaso) |
 
 ## Estructura del repo
 
 ```
 iabd-prep/
-├── 00-python/          Semanas 1-2   Python base + Python para datos
-├── 01-nosql/           Semanas 3-5   MongoDB, modelado, agregaciones, PyMongo
-├── 02-cloud/           Semanas 6-8   AWS (S3, EC2, Lambda, RDS, DynamoDB, Athena, Glue)
-├── 03-bigdata/         Semanas 9-10  Arquitecturas Big Data, ETL, Pentaho, Faker
-├── 04-hadoop/          Semana 11     HDFS, Hive, Sqoop, MapReduce
-├── 05-spark/           Semanas 12-13 PySpark, RDD, DataFrames, Delta Lake, Streaming
-├── 06-dataflow/        Semana 14     Apache Kafka, Apache NiFi, Apache Airflow
-├── 07-huggingface/     Semana 15     HF Pipelines, fine-tuning, Gradio
-└── 08-iot/             Semana 16     Node-RED, InfluxDB, series temporales
+├── 00-python/                  Semanas 1-2
+│   ├── 01-sintaxis-basica/         variables, tipos y operadores
+│   ├── 02-estructuras/             listas, diccionarios, tuplas y sets
+│   ├── 03-comprehensions/          hecho
+│   ├── 04-control-de-flujo/        condicionales y bucles
+│   ├── 05-unpacking/               hecho
+│   ├── 06-funciones/               definicion, parametros, *args y **kwargs
+│   ├── 07-modulos-y-errores/       modulos, paquetes y manejo de errores
+│   └── 08-python-para-datos/       numpy y pandas
+├── 01-mongodb/                 Semanas 3-4 (se desglosa al llegar)
+└── 02-aws/                     Semanas 5-7 (se desglosa al llegar)
 ```
 
-## Tecnologías del curso
-
-| Bloque | Tecnologías |
-|---|---|
-| Almacenamiento NoSQL | MongoDB, PyMongo |
-| Cloud | AWS (S3, EC2, Lambda, RDS, DynamoDB, EMR, Athena, Glue) |
-| Big Data | Hadoop, HDFS, Hive, Sqoop |
-| Procesamiento | Apache Spark, PySpark, Delta Lake |
-| Flujos de datos | Apache Kafka, Apache NiFi, Apache Airflow |
-| IA / Transfer Learning | Hugging Face, Gradio, Transformers |
-| IoT | Node-RED, InfluxDB |
-| Lenguajes | Python, SQL |
+Cada unidad lleva su propio `apuntes.md` (teoría) y `ejercicios.py` (código). Los bloques de MongoDB y AWS se detallan en sus unidades cuando se empiezan.
 
 ## Progreso
 
@@ -38,20 +39,11 @@ iabd-prep/
 |---|---|---|
 | 1 | Python base | En progreso |
 | 2 | Python para datos | Pendiente |
-| 3 | NoSQL + MongoDB | Pendiente |
-| 4 | Modelado + Agregaciones | Pendiente |
-| 5 | PyMongo + Replicación | Pendiente |
-| 6 | AWS Core (S3, EC2) | Pendiente |
-| 7 | AWS Datos y Serverless | Pendiente |
-| 8 | AWS Big Data | Pendiente |
-| 9 | Big Data + Arquitecturas | Pendiente |
-| 10 | ETL + Pentaho + Faker | Pendiente |
-| 11 | Hadoop | Pendiente |
-| 12 | Spark RDD + DataFrames | Pendiente |
-| 13 | Spark Avanzado + Streaming | Pendiente |
-| 14 | Kafka + NiFi + Airflow | Pendiente |
-| 15 | Hugging Face + Gradio | Pendiente |
-| 16 | IoT + Repaso | Pendiente |
+| 3 | MongoDB: intro y modelado | Pendiente |
+| 4 | Agregaciones y PyMongo | Pendiente |
+| 5 | AWS core (S3, EC2) | Pendiente |
+| 6 | AWS datos y serverless | Pendiente |
+| 7 | Athena y repaso | Pendiente |
 
 ## Configuración del entorno
 
@@ -64,26 +56,31 @@ cd iabd-prep
 2. Crea y activa el entorno virtual
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\Activate.ps1
-# macOS/Linux: source .venv/bin/activate
+# Windows (cmd):        .venv\Scripts\activate.bat
+# Windows (PowerShell): .venv\Scripts\Activate.ps1
+# macOS/Linux:          source .venv/bin/activate
 ```
 
-3. Instala las dependencias del bloque actual
+3. Instala las dependencias
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Copia el archivo de variables de entorno y rellena con tus datos
+4. Variables de entorno (solo a partir de MongoDB, semana 3)
 ```bash
-cp .env-example .env
+cp .env-example .env        # Windows: copy .env-example .env
 ```
 
-5. Edita .env con tus credenciales reales (nunca lo subas a GitHub)
+5. Edita `.env` con tus credenciales reales (nunca lo subas a GitHub).
 
-## Nota importante
+## Sobre el curso
 
-Este repo ignora cualquier archivo generado por herramientas de IA (Claude Code, Copilot, Cursor, etc.). Todo el código está escrito y entendido manualmente como parte del aprendizaje.
+El curso completo (600h) cubre almacenamiento NoSQL con MongoDB, Cloud con AWS, Big Data con Hadoop y Spark, flujos de datos con Kafka, NiFi y Airflow, IA y transfer learning con Hugging Face, e IoT con Node-RED e InfluxDB. Esta preparación solo adelanta los tres primeros bloques. Referencia del profesor: aitor-medrano.github.io/iabd
+
+## Nota sobre el código
+
+El código y las soluciones de los ejercicios están escritos y entendidos a mano, como parte del aprendizaje. Los comentarios explicativos pueden estar generados con ayuda de IA. El repositorio ignora los archivos de configuración de herramientas de IA (Claude, Copilot, Cursor, etc.) mediante `.gitignore`.
 
 ## Licencia
 
-MIT. Puedes usar cualquier código de este repo libremente.
+MIT.

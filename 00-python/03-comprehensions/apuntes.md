@@ -1,23 +1,12 @@
-# Apuntes IABD Prep
+# Comprehensions
 
-Notas personales del periodo de preparación. Las vamos ampliando sobre la marcha: cada concepto con su explicación, su sintaxis y ejemplos, para poder volver a consultarlo más adelante.
+Bloque 00 Python. Apuntes de referencia de la unidad. El código de ejemplo es solo para entender cada idea.
 
-El código de ejemplo de estos apuntes es solo de referencia para entender cada idea. Los ejercicios los escribo y los entiendo yo.
-
-## Índice
-
-- Bloque 00 Python
-  - Comprehensions
-
-## Bloque 00 Python
-
-### Comprehensions
-
-#### Para qué sirven
+## Para qué sirven
 
 Tienes una colección y quieres otra colección sacada de ella: transformar cada elemento, quedarte solo con algunos, o las dos cosas a la vez. Es lo que se hace constantemente al manipular datos, y lo que harás todo el rato más adelante con pandas y Spark. Una comprehension es la forma corta e idiomática que tiene Python de hacerlo.
 
-#### El bucle de siempre (versión larga)
+## El bucle de siempre (versión larga)
 
 Antes de la versión corta, la de toda la vida, que ya conoces:
 
@@ -34,7 +23,7 @@ print(resultado)              # [10, 20, 30, 40]
 
 Recordatorio de las piezas: `[]` es una lista vacía, `for n in numeros` recorre la lista (en cada vuelta `n` es el elemento actual) y `.append(x)` mete `x` al final.
 
-#### La misma operación en una línea
+## La misma operación en una línea
 
 Python deja comprimir ese patrón de lista vacía más for más append en una sola línea. Eso es una comprehension. No es un concepto nuevo: es el mismo bucle, encogido.
 
@@ -44,7 +33,7 @@ resultado = [n * 10 for n in numeros]
 print(resultado)              # [10, 20, 30, 40]
 ```
 
-#### De dónde sale cada pieza
+## De dónde sale cada pieza
 
 Las dos versiones juntas:
 
@@ -66,7 +55,7 @@ Lo que cuesta viniendo de Java: escribes primero QUÉ guardas y después DE DÓN
 
 Forma de leerla en voz alta: "dame n por 10, para cada n en numeros".
 
-#### Filtrar con un if al final
+## Filtrar con un if al final
 
 Para quedarte solo con los elementos que cumplen una condición, añades un `if` al final.
 
@@ -78,7 +67,7 @@ print(resultado)              # [2, 4, 6]
 
 El operador `%` da el resto de una división. `n % 2 == 0` significa "n es par" (4 % 2 es 0, 5 % 2 es 1). Es la forma estándar de preguntar si un número es par.
 
-#### Las tres posiciones (toda la regla)
+## Las tres posiciones (toda la regla)
 
 ```python
 [  n        for n in numeros    if n % 2 == 0  ]
@@ -96,7 +85,7 @@ print(resultado)              # [4, 16, 36]
 # n ** 2 es n al cuadrado (dos asteriscos seguidos es potencia)
 ```
 
-#### Diccionarios (dict comprehension)
+## Diccionarios (dict comprehension)
 
 Un diccionario es una colección de parejas clave-valor, un mapa donde a cada clave le corresponde un valor. Es el equivalente al HashMap de Java. Se construye con llaves `{}` y, en la parte de delante, `clave: valor` separados por dos puntos.
 
@@ -109,7 +98,7 @@ print(longitudes)             # {"ana": 3, "luis": 4, "alba": 4}
 
 Lo único nuevo es `nombre: len(nombre)`: la clave antes de los dos puntos, el valor después. El for y el if opcional funcionan igual que en una lista.
 
-#### Conjuntos (set comprehension)
+## Conjuntos (set comprehension)
 
 Un set es una colección sin elementos repetidos y sin orden, útil cuando quieres valores únicos. También usa llaves `{}`, pero SIN los dos puntos. Eso es lo único que lo distingue de un dict por fuera.
 
@@ -121,13 +110,13 @@ print(iniciales)              # {"s", "l", "m"}
 # "sol" aparece dos veces pero la "s" sale una sola vez
 ```
 
-#### El envoltorio es lo único que cambia entre los tres
+## El envoltorio es lo único que cambia entre los tres
 
 - `[ ... ]` es una lista
 - `{ clave: valor ... }` es un diccionario (lleva dos puntos)
 - `{ ... }` es un set (sin dos puntos)
 
-#### Cosas a tener en cuenta
+## Cosas a tener en cuenta
 
 - Si una comprehension no se entiende de un vistazo, vuelve al bucle for. Lo legible gana siempre. Una comprehension ilegible es peor que un bucle claro.
 - No modifica la colección original: crea una nueva. Después de ejecutarla, la lista de partida sigue intacta.

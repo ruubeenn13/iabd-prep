@@ -1,6 +1,6 @@
 # Tema: Comprehensions
 # Bloque 00 Python
-# Teoria de referencia: apuntes.md (raiz)
+# Teoria de referencia: apuntes.md (misma carpeta)
 
 
 # Ejercicio 1: variable 'ciudad' con tu ciudad, mostrarla con print
