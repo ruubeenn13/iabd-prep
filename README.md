@@ -1,86 +1,72 @@
 # IABD Prep 2026
 
-Repositorio de prácticas y apuntes del plan de preparación para el Curso de Especialización en Inteligencia Artificial y Big Data, IES Severo Ochoa, Elche (inicio octubre 2026, 600h).
+Preparacion para el Curso de Especializacion en Inteligencia Artificial y Big Data (IABD).
+IES Severo Ochoa, Elche. Inicio en octubre de 2026.
 
-## Resumen del plan
+Referencia del temario del curso: https://aitor-medrano.github.io/iabd
 
-Plan comprimido de 7 semanas, del 10 de agosto al 27 de septiembre, centrado en los tres bloques con más peso del curso: Python, MongoDB y AWS. El resto de tecnologías (Hadoop, Spark, Kafka, NiFi, Airflow, Hugging Face e IoT) se cubren en clase desde cero y no entran en esta preparación.
+## Objetivo
 
-| Dato | Valor |
-|---|---|
-| Duración | 7 semanas (10 ago a 27 sep) |
-| Ritmo | 6 a 8 horas por semana |
-| Total estimado | ~50 horas |
-| Bloques | Python, MongoDB, AWS |
-| Buffer | 28 sep al 4 oct (repaso) |
+Llegar al curso con base solida en los tres bloques con mas peso y que mas cuesta arrancar en frio: Python (lenguaje y datos), MongoDB y AWS. El resto de tecnologias del curso (Hadoop, Spark, Kafka, NiFi, Airflow, Hugging Face e IoT) se ven en clase desde cero, asi que no forman parte de esta preparacion.
+
+## Plan de estudio
+
+13 semanas, del 30 de junio al 28 de septiembre. Ritmo aproximado de 7 a 8 horas por semana. El plan va por delante segun el dominio real: Python base es rapido, asi que se deja mas colchon para Mongo y AWS, que son mas densos. Cada bloque cierra con un examen y un miniproyecto, y al final hay un proyecto integrador.
+
+Bloque 1 - Python (semanas 1 a 5)
+- Semanas 1 y 2: Python base (sintaxis, estructuras, comprehensions, unpacking, control de flujo, funciones, modulos y errores) y examen.
+- Semanas 3 a 5: Python para datos (numpy y pandas), miniproyecto y examen.
+
+Bloque 2 - MongoDB (semanas 6 a 8)
+- CRUD, modelado, consultas, indices, agregaciones y PyMongo, miniproyecto y examen.
+
+Bloque 3 - AWS (semanas 9 a 12)
+- Fundamentos, IAM, S3, EC2, RDS, DynamoDB, Lambda, Athena y Glue, miniproyecto y examen.
+
+Cierre (semana 13)
+- Proyecto integrador (Python + Mongo + AWS) y repaso global.
+
+El seguimiento semana a semana esta en Notion (workspace IABD Prep 2026).
 
 ## Estructura del repo
 
 ```
-iabd-prep/
-├── 00-python/                  Semanas 1-2
-│   ├── 01-sintaxis-basica/         variables, tipos y operadores
-│   ├── 02-estructuras/             listas, diccionarios, tuplas y sets
-│   ├── 03-comprehensions/          hecho
-│   ├── 04-control-de-flujo/        condicionales y bucles
-│   ├── 05-unpacking/               hecho
-│   ├── 06-funciones/               definicion, parametros, *args y **kwargs
-│   ├── 07-modulos-y-errores/       modulos, paquetes y manejo de errores
-│   └── 08-python-para-datos/       numpy y pandas
-├── 01-mongodb/                 Semanas 3-4 (se desglosa al llegar)
-└── 02-aws/                     Semanas 5-7 (se desglosa al llegar)
+00-python/        Bloque de Python (base y datos)
+  01-sintaxis-basica/
+  02-estructuras/
+  03-comprehensions/
+  04-control-de-flujo/
+  05-unpacking/
+  06-funciones/
+  07-modulos-y-errores/
+  08-numpy/
+  09-pandas/
+01-mongodb/       Bloque de MongoDB
+  01-intro-crud-modelado/
+  02-consultas-indices-agregaciones/
+  03-pymongo/
+02-aws/           Bloque de AWS
+  01-fundamentos-iam-s3-ec2/
+  02-rds-dynamodb-lambda/
+  03-athena-glue/
+proyectos/        Miniproyectos de cada bloque y proyecto integrador
+  01-datos-pandas/
+  02-mongodb/
+  03-aws/
+  04-integrador/
 ```
 
-Cada unidad lleva su propio `apuntes.md` (teoría) y `ejercicios.py` (código). Los bloques de MongoDB y AWS se detallan en sus unidades cuando se empiezan.
+Cada unidad tiene su propio apuntes.md con la teoria y su ejercicios.py con la practica. La unidad de pandas usa notebooks (.ipynb) en lugar de .py.
 
-## Progreso
+## Convenciones
 
-| Semana | Bloque | Estado |
-|---|---|---|
-| 1 | Python base | En progreso |
-| 2 | Python para datos | Pendiente |
-| 3 | MongoDB: intro y modelado | Pendiente |
-| 4 | Agregaciones y PyMongo | Pendiente |
-| 5 | AWS core (S3, EC2) | Pendiente |
-| 6 | AWS datos y serverless | Pendiente |
-| 7 | Athena y repaso | Pendiente |
+- Apuntes: un apuntes.md por unidad, dentro de la carpeta de esa unidad. Es lo primero que se crea al empezar cada unidad, antes de los ejercicios.
+- Codigo: cada unidad resuelve sus ejercicios en ejercicios.py. Solo la unidad de pandas usa notebooks.
+- Commits: Conventional Commits. Primero un commit docs: con el apuntes.md al empezar la unidad, y al terminar otro commit feat: con los ejercicios.
+- Sin caracteres decorativos ni emojis en apuntes ni en codigo. Solo comentarios normales.
 
-## Configuración del entorno
+## Entorno
 
-1. Clona el repo
-```bash
-git clone https://github.com/ruubeenn13/iabd-prep.git
-cd iabd-prep
-```
-
-2. Crea y activa el entorno virtual
-```bash
-python -m venv .venv
-# Windows (cmd):        .venv\Scripts\activate.bat
-# Windows (PowerShell): .venv\Scripts\Activate.ps1
-# macOS/Linux:          source .venv/bin/activate
-```
-
-3. Instala las dependencias
-```bash
-pip install -r requirements.txt
-```
-
-4. Variables de entorno (solo a partir de MongoDB, semana 3)
-```bash
-cp .env-example .env        # Windows: copy .env-example .env
-```
-
-5. Edita `.env` con tus credenciales reales (nunca lo subas a GitHub).
-
-## Sobre el curso
-
-El curso completo (600h) cubre almacenamiento NoSQL con MongoDB, Cloud con AWS, Big Data con Hadoop y Spark, flujos de datos con Kafka, NiFi y Airflow, IA y transfer learning con Hugging Face, e IoT con Node-RED e InfluxDB. Esta preparación solo adelanta los tres primeros bloques. Referencia del profesor: aitor-medrano.github.io/iabd
-
-## Nota sobre el código
-
-El código y las soluciones de los ejercicios están escritos y entendidos a mano, como parte del aprendizaje. Los comentarios explicativos pueden estar generados con ayuda de IA. El repositorio ignora los archivos de configuración de herramientas de IA (Claude, Copilot, Cursor, etc.) mediante `.gitignore`.
-
-## Licencia
-
-MIT.
+- Windows, Python 3.14, VS Code.
+- Entorno virtual en .venv. Se activa en cmd con .venv\Scripts\activate.bat.
+- Paquetes base: numpy, pandas, matplotlib, ipykernel.
